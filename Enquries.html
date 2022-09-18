@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiries</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    
+    <form id="form" action="#" method="" style="border: 2px solid black;border-spacing: 25px; width: 50%;" autocomplete="off" onsubmit="return validation()" >
+        <br>
+        <br>
+        <div class="kl" >
+        <label for="name" ><strong>Name</strong>:</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <span id="namme"></span>
+        <br>
+        <br>
+        <label for="Number"><strong>Number</strong>:</label>
+        <input type="numeric" name= "" id="nam" placeholder="07">
+        <br>
+        <span id="namm"></span>
+        <br>
+        <br> 
+        <label for="Email"><Strong>Email</Strong>:</label>
+        <input type="email" name="" id="na" >
+        <br>
+                <span id="naa"></span>
+        <br>
+        <br>
+        <label for="Enquiry"><strong>Enquiry</strong></label>
+        <textarea name="Enquiry" id="n" cols="30" rows="10"></textarea>
+        <br>
+                <span id="nn"></span>
+       <br>
+       <br>
+       <input type="submit" value="Submit">
+       <br>
+       <br>
+
+    </form>
+    <script type="text/javascript">
+        function validation()
+      
+        
+        {
+            var name= document.getElementById('name').value;
+            var nam = document.getElementById('nam').value;
+            var na = document.getElementById('na').value;
+            var n = document.getElementById('n').value;
+        
+
+            if(name=="")
+            {
+                document.getElementById('namme').innerHTML="**please write name in the box**";
+            }
+            else if(name!=/[^a-z]/gi)
+            {
+               document.getElementById('namme').innerHTML = "**text only**"; 
+            }
+            if (nam == "")
+            {
+                document.getElementById('namm').innerHTML = "**please write Number in the box**";
+            }
+            else if(nam!=/[^0-9]/g)
+            {
+                document.getElementById('namm').innerHTML = "**numeric only**";
+            }
+            if (na == "")
+            {
+                document.getElementById('naa').innerHTML = "**please write email in the box**";
+            }
+            if (n == "")
+            {
+                document.getElementById('nn').innerHTML = "**please write memo in the box**";
+            }
+        
+        }
+
+    </script>
+</div>
+</body>
+</html>
+
+
+
+
+
+
